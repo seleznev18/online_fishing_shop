@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин Fishing-market</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+
+    <header class="topbar">
+        <div class="layout">
+            <div class="brand-block">
+                <h1 class="brand-title">Fishing-market</h1>
+                <p class="tagline">Полный рыболовный ассортимент</p>
+            </div>
+
+            <div class="actions">
+                <button id="cartButton" class="action-cart">
+                    <span>Корзина:</span> <strong id="cartCount">0</strong>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="content">
+
+        <section class="catalog">
+            <div class="layout">
+                <h2 class="section-title">Наши товары</h2>
+                <div id="productsGrid" class="item-grid">
+                </div>
+            </div>
+        </section>
+        <aside id="cartSidebar" class="side-cart">
+            <header class="side-cart-header">
+                <h3>Ваша корзина</h3>
+                <button id="closeCart" class="close-btn">&times;</button>
+            </header>
+            <div id="cartItems" class="side-cart-items"></div>
+            <footer class="side-cart-footer">
+                <div class="total-line">
+                    Итого: <span id="cartTotal">0</span> руб.
+                </div>
+                <button id="checkoutButton" class="btn-checkout">
+                    Перейти к оформлению
+                </button>
+            </footer>
+        </aside>
+    </main>
+
+    <div id="modalOverlay" class="popup-overlay">
+        <div class="popup">
+            <header class="popup-header">
+                <h3>Заполните данные</h3>
+                <button id="closeModal" class="close-btn">&times;</button>
+            </header>
+
+            <form id="orderForm" class="popup-form">
+
+                <div class="field">
+                    <label for="firstName">Имя</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+
+                <div class="field">
+                    <label for="lastName">Фамилия</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+
+                <div class="field">
+                    <label for="address">Адрес доставки</label>
+                    <textarea id="address" name="address" required></textarea>
+                </div>
+
+                <div class="field">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    Подтвердить заказ
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
