@@ -1,0 +1,60 @@
+/* Планшеты */
+@media screen and (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+        gap: 1.2rem;
+    }
+
+    .cart-sidebar {
+        width: 330px;
+    }
+
+    .container {
+        padding-inline: 12px;
+    }
+}
+
+/* Телефоны */
+@media screen and (max-width: 480px) {
+    .header .container {
+        flex-direction: column;
+        row-gap: 0.8rem;
+        text-align: center;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .cart-sidebar {
+        width: 100vw;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        row-gap: 0.6rem;
+    }
+
+    .modal {
+        width: 92%;
+        margin: 0.8rem auto;
+    }
+
+    .product-card {
+        padding: 0.9rem;
+    }
+}
+
+/* Мониторы */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1350px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+}
